@@ -81,6 +81,7 @@ module ActiveRecord
         super(connection, logger, config)
         @database_metadata = database_metadata
         @connection = connection
+        @raw_connection = connection
       end
 
       # Returns the human-readable name of the adapter.
