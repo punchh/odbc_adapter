@@ -76,7 +76,7 @@ module ActiveRecord
       # when a connection is first established.
       attr_reader :database_metadata
 
-      def initialize(connection, logger, config, database_metadata)
+      def initialize(connection)
         connection, logger, config, database_metadata = ActiveRecord::Base.odbc_connection(connection)
         configure_time_options(connection)
         super(connection, logger, config)
